@@ -24,7 +24,7 @@ const router = createBrowserRouter([
         path: '/allUser',
         element: <AllUser></AllUser>,
         loader: async () => {
-          const res = await fetch('http://localhost:3000/users')
+          const res = await fetch('https://modules-task-client.vercel.app/users')
           const data = await res.json()
           const userAllData = data
           return userAllData;
@@ -32,7 +32,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/update/:id',
-        loader: ({ params }) => fetch(`http://localhost:3000/users/${params.id}`),
+        loader: ({ params }) => fetch(`https://modules-task-client.vercel.app/users/${params.id}`),
         element: <Update></Update>
 
       }

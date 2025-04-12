@@ -14,7 +14,7 @@ const Update = () => {
         const status=e.target.status.value;
         const updateUser={name,email,gender,status}
         console.log(name,email,gender,status)
-        fetch(`http://localhost:3000/users/${params.id}`,{
+        fetch(`https://modules-task-client.vercel.app/users/${params.id}`,{
             method:'put',
             headers:{
                 'content-type':'application/json'

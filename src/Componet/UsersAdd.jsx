@@ -21,7 +21,7 @@ const UsersAdd = () => {
             .then(result => {
                 console.log(result.user)
                 // insert mongodb database
-                fetch('http://localhost:3000/users', {
+                fetch('https://modules-task-client.vercel.app/users', {
                     method: 'post',
                     headers: {
                         'content-type': 'application/json'
